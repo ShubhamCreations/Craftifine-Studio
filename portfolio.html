@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CRAFTIFINE STUDIO | Our Work</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      color:white;
+      font-family:'Roboto',sans-serif;
+      overflow-x:hidden;
+    }
+
+    /* HERO SECTION */
+.portfolio-hero{
+  min-height:40vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  padding:40px 20px;
+
+  background:
+  radial-gradient(circle at top left,
+  rgba(255,44,44,0.18),
+  transparent 35%),
+
+  radial-gradient(circle at bottom right,
+  rgba(255,44,44,0.12),
+  transparent 30%),
+
+  linear-gradient(to bottom,
+  #050505 0%,
+  #050505 75%,
+  #040404 100%);
+}
+
+.portfolio-hero::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:120px;
+
+  background:linear-gradient(
+    to bottom,
+    rgba(5,5,5,0),
+    #050505
+  );
+
+  pointer-events:none;
+}
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:900px;
+    }
+
+    .hero-mini{
+      color:#ff2c2c;
+      letter-spacing:4px;
+      margin-bottom:20px;
+      font-size:0.9rem;
+    }
+
+    .portfolio-hero h1{
+      font-family:'League Spartan',sans-serif;
+      font-size:6rem;
+      line-height:0.9;
+      text-transform:uppercase;
+      margin-bottom:30px;
+    }
+
+    .portfolio-hero h1 span{
+      color:#ff2c2c;
+    }
+
+    .hero-sub{
+      color:#bfbfbf;
+      font-size:1.1rem;
+      line-height:1.8;
+      max-width:720px;
+      margin:auto;
+    }
+
+    /* MAIN CONTAINER */
+
+    .container{
+      width:90%;
+      max-width:1400px;
+      margin:auto;
+      padding:100px 0;
+      
+    }
+
+    /* CATEGORY */
+
+    .portfolio-section{
+      margin-bottom:120px;
+    }
+
+    .category-title{
+      font-family:'League Spartan',sans-serif;
+      font-size:2.3rem;
+      text-transform:uppercase;
+      margin-bottom:15px;
+      letter-spacing:1px;
+    }
+
+    .category-sub{
+      color:#9f9f9f;
+      margin-bottom:40px;
+      line-height:1.7;
+    }
+
+    /* VIDEO GRID */
+
+    .video-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,280px));
+      justify-content:center;
+      gap:28px;
+    }
+
+    /* VIDEO CARD */
+
+    .video-card{
+      background:#111;
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.06);
+      transition:0.35s ease;
+      position:relative;
+    }
+
+    .video-card:hover{
+      transform:translateY(-10px);
+      border-color:#ff2c2c;
+      box-shadow:0 0 30px rgba(255,44,44,0.12);
+    }
+
+    video{
+      width:100%;
+      aspect-ratio:9/16;
+      object-fit:cover;
+      display:block;
+      background:black;
+    }
+
+    .video-content{
+      padding:22px;
+    }
+
+    .video-content h3{
+      font-family:'League Spartan',sans-serif;
+      margin-bottom:10px;
+      font-size:1.3rem;
+    }
+
+    .video-content p{
+      color:#bfbfbf;
+      line-height:1.6;
+      font-size:0.95rem;
+    }
+
+    /* FOOTER CTA */
+
+    .footer-cta{
+      text-align:center;
+      padding:120px 20px;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-cta h2{
+      font-family:'League Spartan',sans-serif;
+      font-size:4rem;
+      text-transform:uppercase;
+      margin-bottom:25px;
+    }
+
+    .footer-cta h2 span{
+      color:#ff2c2c;
+    }
+
+    .footer-cta p{
+      color:#bfbfbf;
+      max-width:700px;
+      margin:auto;
+      line-height:1.8;
+      margin-bottom:40px;
+    }
+
+    .contact-btn{
+      display:inline-block;
+      padding:16px 34px;
+      border-radius:14px;
+
+      background:
+      linear-gradient(135deg,#ff2c2c,#8b0000);
+
+      color:white;
+      text-decoration:none;
+
+      font-family:'League Spartan',sans-serif;
+      letter-spacing:1px;
+
+      transition:0.3s ease;
+    }
+
+    .contact-btn:hover{
+      transform:translateY(-5px);
+    }
+
+    .back-home{
+      display:inline-block;
+      margin-top:25px;
+      color:#9f9f9f;
+      text-decoration:none;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .portfolio-hero h1{
+        font-size:3.8rem;
+      }
+
+      .footer-cta h2{
+        font-size:2.8rem;
+      }
+
+      .category-title{
+        font-size:1.8rem;
+      }
+
+      .video-grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <header class="portfolio-hero">
+
+    <div class="hero-content">
+
+      <p class="hero-mini">
+        CRAFTIFINE STUDIO
+      </p>
+
+      <h1>
+        OUR <span>WORK</span>
+      </h1>
+
+      <p class="hero-sub">
+        High-retention edits crafted for creators who want stronger engagement, modern visuals, and storytelling-focused content.
+      </p>
+
+    </div>
+
+  </header>
+  <!-- MAIN -->
+
+  <div class="container">
+
+    <!-- SAMPLE EDITS -->
+
+    <section class="portfolio-section">
+
+      <h2 class="category-title">
+        Sample Edits
+      </h2>
+
+      <p class="category-sub">
+        Clean, engaging, and retention-focused short-form edits.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-card">
+
+          <video controls poster="thumb a3.jpeg">
+            <source src="Craftifine (kh) Sample 3.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Podcast Edit</h3>
+            <p>Fast-paced short with stylish subtitles, sound effects, dynamic pacing and focused on audience retention</p>
+          </div>
+
+        </div>
+
+        <div class="video-card">
+
+          <video controls poster="thumb a1.jpeg">
+            <source src="Craftifine (kh) Sample 1.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Advertisement Edit </h3>
+            <p>Dynamic pacing with Modern subtitles, SFX and focused on client retention.</p>
+          </div>
+
+        </div>
+
+        <div class="video-card">
+
+          <video controls poster="thumb a2.jpeg">
+            <source src="Craftifine (kh) Sample 2.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Emotional Story Edit</h3>
+            <p>Story based with subtitles, SFX, Dynamic pacing, matched with theme.</p>
+          </div>
+
+        </div>
+        
+                <div class="video-card">
+
+          <video controls poster="thumb a4.jpeg">
+            <source src="Craftifine (kv) Sample 1.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Real Estate Edit</h3>
+            <p>Real estate edit with subtitles, SFX, Fast-Dynamic pacing for Advertising.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- BEFORE AFTER -->
+
+    <section class="portfolio-section">
+
+      <h2 class="category-title">
+        Before & After
+      </h2>
+
+      <p class="category-sub">
+        See the transformation from raw footage to polished final edits.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-card">
+          <video controls poster="thumb b4.jpeg">
+            <source src="Craftifine (kh) Before After 4.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Gudidance Edit</h3>
+            <p>Raw footage enhanced with pacing, subtitles, transitions, motion effects, sound effects for audience retention.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls poster="thumb b1.jpeg">
+            <source src="Craftifine (kh) Before After 1.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Motivational Edit</h3>
+            <p>transformation of a Motivational Podcast into a engaging short-form video.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls poster="thumb b2.jpeg">
+            <source src="Craftifine (kh) Before After 2.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Habit improvement edit</h3>
+            <p>Improved pacing, subtitles, transitions with audience hook.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls poster="thumb b3.jpeg">
+            <source src="Craftifine (kh) Before After 3.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Geographical Edit</h3>
+            <p>Modern edit with cinematic pacing and visual geographic earth effect.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- STORYBOARD -->
+
+    <section class="portfolio-section">
+
+      <h2 class="category-title">
+        Storyboard Edits
+      </h2>
+
+      <p class="category-sub">
+        Transformation of Storyboard to final Video.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-card">
+          <video controls poster="thumb c1.jpeg">
+            <source src="Craftifine (kh) Storyboard 1.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Cinematic Story</h3>
+            <p>Visual Storyboard edit with 3D effects, good for audience retention.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls poster="thumb c2.jpeg">
+            <source src="Craftifine (kh) Storyboard 2.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Fact Edit</h3>
+            <p>Fact-based edit transformed from planed Storyboard with motion effects.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <video controls poster="thumb c3.jpeg">
+            <source src="Craftifine (kh) Storyboard 3.mp4" type="video/mp4">
+          </video>
+
+          <div class="video-content">
+            <h3>Invention Edit</h3>
+            <p>Invention process, Fact-based edit with 3D effects of engagement.</p>
+          </div>
+        </div>
+        
+        
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <section class="footer-cta">
+
+    <h2>
+      READY TO <span>LEVEL UP</span> YOUR CONTENT?
+    </h2>
+
+    <p>
+      Let’s create engaging, modern, and high-retention content designed for creator growth.
+    </p>
+
+    <a href="index.html#contact" class="contact-btn">
+      CONTACT US
+    </a>
+
+    <br>
+
+    <a href="index.html" class="back-home">
+      ← Back To Home
+    </a>
+
+  </section>
+
+</body>
+</html>
